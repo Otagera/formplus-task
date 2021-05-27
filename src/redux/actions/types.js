@@ -1,0 +1,9 @@
+export const GET_ALL_TEMPLATES = 'GET_ALL_TEMPLATES';
+export const GET_ALL_TEMPLATES_SUCCESS = 'GET_ALL_TEMPLATES_SUCCESS';
+
+export const GET_CATEGORIES = 'GET_CATEGORIES';
+
+export const SEARCH_BY_NAME = 'SEARCH_BY_NAME';
+export const SET_CATEGORY = 'SET_CATEGORY';
+export const SET_ORDER = 'SET_ORDER';
+export const SET_DATE = 'SET_DATE';
