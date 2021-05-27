@@ -22,17 +22,15 @@ function Templates() {
 	const templatesStore = useSelector((state) => state.templates);
 	const { templates, selectedCategory, loadingTemplates } = templatesStore;
 
-
-	const resize = ()=> {
-    setScreenWidth(window.innerWidth);
-	}
-
 	useEffect(() => {
+		const resize = ()=> {
+	    setScreenWidth(window.innerWidth);
+		}
 		window.addEventListener("resize", resize.bind(this));
     resize();
 	  return () => window.removeEventListener("resize", resize.bind(this));;
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [resize]);
+	}, []);
 
 	useEffect(() => {
 		dispatch(fetchAllTemplates());
