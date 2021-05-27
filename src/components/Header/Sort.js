@@ -39,8 +39,8 @@ const Sort = ( props )=>{
 		}
 	}
 	return (
-		<div className='flex flex-col lg:flex-row space-y-8 lg:space-x-8 py-3 m-auto'>
-			<p className=''>Sort By:</p>
+		<div className='flex flex-col md:flex-row space-y-8 md:space-x-8 py-3 m-auto'>
+			<p className='py-5'>Sort By:</p>
 			<div className='px-5 border rounded-sm w-max h-10 relative'>
 				<label htmlFor="Category" className='absolute -top-2.5 left-2.5 z-10 bg-white h-auto text-xs'>Category</label>
 				<select

@@ -19,15 +19,17 @@ const Bar = ( props )=>{
 		}
 	}
 	return (
-		<div className='m-2 px-5 py-3 border flex flex-row focus:outline-none focus:ring-2 focus:ring-gray-100 focus:border-transparent'>
+		<div className='h-12 m-2 px-3 my-10 border flex flex-row focus:outline-none focus:ring-2 focus:ring-gray-100 focus:border-transparent'>
 			<input 
-				className='pl-3 bg-white bg-opacity-5 rounded-sm text-gray focus:border-none focus:outline-none'
+				className='flex-grow pl-3 pt-2 h-10 bg-white bg-opacity-5 rounded-sm text-gray focus:border-none focus:outline-none'
 				type="text"
 				name='SearchQuery'
 				value={searchQuery}
 				onChange={handleChange}
-				placeholder="Search Templates"/>			
-			<SearchIcon className='h-5 w-5 text-gray' />
+				placeholder="Search Templates"/>
+			<div className='pt-3 flex-end'>
+				<SearchIcon className='h-5 w-5 text-gray' />
+			</div>
 		</div>
 	);
 }
