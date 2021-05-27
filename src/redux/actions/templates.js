@@ -18,7 +18,7 @@ export const fetchAllTemplates = () => async (dispatch) => {
       type: actionTypes.GET_ALL_TEMPLATES_SUCCESS,
       payload: {
         data,
-        //data: [],
+        // data: [],
         loading: false
       }
     });

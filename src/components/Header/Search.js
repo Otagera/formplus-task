@@ -9,7 +9,7 @@ class Search extends Component {
     }
 	render(){
 		return (
-			<div className='mt-20 flex flex-row space-between w-100 justify-between'>
+			<div className='mt-20 flex flex-col lg:flex-row space-between w-100 justify-between'>
 				<Bar />
 				<Sort />
 			</div>

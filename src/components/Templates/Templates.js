@@ -12,6 +12,7 @@ import { fetchAllTemplates } from "../../redux/actions/templates";
 
 function Templates() {
 	const [page, setPage] = useState(0);
+	const [screenWidth, setScreenWidth] = useState(0);
 	const [offset, setOffset] = useState(0);
 	const [pageCount, setPageCount] = useState(5);
 	const [perPage] = useState(10);
@@ -20,6 +21,18 @@ function Templates() {
 	const dispatch = useDispatch();
 	const templatesStore = useSelector((state) => state.templates);
 	const { templates, selectedCategory, loadingTemplates } = templatesStore;
+
+
+	const resize = ()=> {
+    setScreenWidth(window.innerWidth);
+	}
+
+	useEffect(() => {
+		window.addEventListener("resize", resize.bind(this));
+    resize();
+	  return () => window.removeEventListener("resize", resize.bind(this));;
+		//eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [resize]);
 
 	useEffect(() => {
 		dispatch(fetchAllTemplates());
@@ -77,13 +90,13 @@ function Templates() {
 				breakClassName={"break-me"}
 				pageCount={pageCount}
 				marginPagesDisplayed={1}
-				pageRangeDisplayed={2}
+				pageRangeDisplayed={screenWidth < 500? 1: 3}
 				initialPage={page}
 				onPageChange={handlePageClick}
 				containerClassName={
-					"flex flex-row justify-between px-20 mt-5 font-bold"
+					"flex flex-row justify-between px-2 lg:px-20 mt-5 font-bold"
 				}
-				activeClassName={"border rounded-sm px-5 py-1"}
+				activeClassName={"border rounded-sm px-5 lg:py-1"}
 			/>
 		</div>
 	);
