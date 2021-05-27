@@ -1,5 +1,5 @@
 import * as actionTypes from "../actions/types";
-import { templates } from '../dummyData';
+//import { templates } from '../dummyData';
 const defaultState = {
   categories: ["All", "Health", "E-commerce", "Education"],
   orders: ["Default", "Ascending", "Descending"],
