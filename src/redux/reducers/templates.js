@@ -7,7 +7,7 @@ const defaultState = {
   selectedCategory: "All",
   selectedOrder: "Default",
   selectedDate: "Default",
-  templates: templates
+  templates: []/* templates */
 };
 const compareFunction = (key, order = "asc") => {
   return (a, b) => {
